@@ -19,9 +19,7 @@ import UserAvatar from "@/components/user-avatar";
 import { BotAvatar } from "@/components/bot-avatar";
 import { useProModal } from "@/hooks/use-pro-modal";
 
-type Props = {};
-
-const CodePage = (props: Props) => {
+const CodePage = () => {
   const proModal = useProModal();
   const router = useRouter();
   const [messages, setMessages] = useState<any[]>([]);

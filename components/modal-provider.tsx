@@ -2,9 +2,9 @@
 import { useEffect, useState } from "react";
 import ProModal from "./pro-modal";
 
-type Props = {};
 
-const ModalProvider = (props: Props) => {
+
+const ModalProvider = () => {
   const [isMounted, setIsMounted] = useState(false);
 
   useEffect(() => {

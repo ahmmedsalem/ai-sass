@@ -23,7 +23,7 @@ import { cn } from "@/lib/utils";
 import { Button } from "./ui/button";
 import axios from "axios";
 
-type Props = {};
+
 
 const tools = [
   {
@@ -63,7 +63,7 @@ const tools = [
   },
 ];
 
-const ProModal = (props: Props) => {
+const ProModal = () => {
   const proModal = useProModal();
   const [loading, setLoading] = useState(false);
 

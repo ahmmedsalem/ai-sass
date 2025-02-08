@@ -24,9 +24,8 @@ import { Card, CardFooter } from "@/components/ui/card";
 import Image from "next/image";
 import { useProModal } from "@/hooks/use-pro-modal";
 
-type Props = {};
 
-const ImagePage = (props: Props) => {
+const ImagePage = () => {
   const proModal = useProModal();
   const [images, setImages] = useState<string[]>([]);
   const router = useRouter();

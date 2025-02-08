@@ -19,7 +19,7 @@ const DashboardLayout = async ({ children }: Props) => {
         </div>
       </div>
       <main className="md:pl-72">
-        <Navbar />
+        <Navbar isPro={isPro}/>
         {children}
       </main>
     </div>

@@ -2,9 +2,8 @@
 import { useEffect } from "react";
 import { Crisp } from "crisp-sdk-web";
 
-type Props = {};
 
-export const CrispChat = (props: Props) => {
+export const CrispChat = () => {
     useEffect(() => {
         Crisp.configure("e41d137e-8651-4eb3-a504-70adffb5fca8");
     }, []);

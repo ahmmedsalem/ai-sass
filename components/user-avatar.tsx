@@ -2,9 +2,9 @@ import { useUser } from "@clerk/nextjs";
 import React from "react";
 import { Avatar, AvatarFallback, AvatarImage } from "./ui/avatar";
 
-type Props = {};
 
-const UserAvatar = (props: Props) => {
+
+const UserAvatar = () => {
   const { user } = useUser();
   return (
     <Avatar className="h-8 w-8">

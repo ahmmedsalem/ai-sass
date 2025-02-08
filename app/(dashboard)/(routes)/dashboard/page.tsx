@@ -41,9 +41,8 @@ const tools = [
   },
 ];
 
-type Props = {};
 
-const DashboardPage = (props: Props) => {
+const DashboardPage = () => {
   const router =useRouter()
   return (
     <div>

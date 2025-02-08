@@ -2,8 +2,6 @@
 
 import { Card, CardContent, CardHeader, CardTitle } from "./ui/card";
 
-type Props = {};
-
 const testimonials = [
   {
     name: "John Doe",
@@ -26,16 +24,9 @@ const testimonials = [
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed et purus id libero gravida. Nullam nec risus eget quam aliquet fermentum. Nullam nec risus eget quam aliquet fermentum.",
   },
-  {
-    name: "Jane Doe",
-    avatar: "JD",
-    title: "Software Engineer",
-    description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed et purus id libero gravida. Nullam nec risus eget quam aliquet fermentum. Nullam nec risus eget quam aliquet fermentum.",
-  },
 ];
 
-const LandingContent = (props: Props) => {
+const LandingContent = () => {
   return (
     <div className="px-10 pb-20">
       <h2 className="text-center text-4xl text-white font-extrabold mb-10">

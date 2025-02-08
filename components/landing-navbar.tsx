@@ -7,14 +7,14 @@ import Image from "next/image";
 import Link from "next/link";
 import { Button } from "./ui/button";
 
-type Props = {};
+
 
 const font = Montserrat({
   weight: "600",
   subsets: ["latin"],
 });
 
-const LandingNavbar = (props: Props) => {
+const LandingNavbar = () => {
   const { isSignedIn } = useAuth();
   return (
     <nav className="p-4 bg-transparent flex items-center justify-between">
