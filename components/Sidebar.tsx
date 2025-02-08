@@ -11,10 +11,8 @@ import {
   VideoIcon,
 } from "lucide-react";
 import { Montserrat } from "next/font/google";
-import { useParams, usePathname } from "next/navigation";
-import Image from "next/image";
+import { usePathname } from "next/navigation";
 import Link from "next/link";
-import React from "react";
 import FreeCounter from "./free-counter";
 
 const montserrat = Montserrat({ weight: "600", subsets: ["latin"] });
@@ -65,9 +63,10 @@ const routes = [
 
 type Props = {
   apiLimitCount: number;
+  isPro: boolean;
 };
 
-const Sidebar = ({ apiLimitCount }: Props) => {
+const Sidebar = ({ apiLimitCount, isPro }: Props) => {
   const pathname = usePathname();
   return (
     <div className="space-y-4 py-4 flex flex-col h-full bg-[#111827] text-white">
@@ -100,7 +99,7 @@ const Sidebar = ({ apiLimitCount }: Props) => {
           ))}
         </div>
       </div>
-      <FreeCounter apiLimitCount={apiLimitCount} />
+      {!isPro && <FreeCounter apiLimitCount={apiLimitCount} />}
     </div>
   );
 };

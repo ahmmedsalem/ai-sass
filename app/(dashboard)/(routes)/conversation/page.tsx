@@ -22,6 +22,7 @@ type Props = {};
 
 const ConversationPage = (props: Props) => {
   const proModal = useProModal();
+  
   const router = useRouter();
   const [messages, setMessages] = useState<any[]>([]);
   const form = useForm<z.infer<typeof formSchema>>({

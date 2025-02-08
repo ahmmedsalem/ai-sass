@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import {
   Dialog,
   DialogContent,
@@ -21,6 +21,7 @@ import {
 import { Card } from "./ui/card";
 import { cn } from "@/lib/utils";
 import { Button } from "./ui/button";
+import axios from "axios";
 
 type Props = {};
 
@@ -64,6 +65,18 @@ const tools = [
 
 const ProModal = (props: Props) => {
   const proModal = useProModal();
+  const [loading, setLoading] = useState(false);
+
+  const onSubscribe = async () => {
+    try {
+      const response = await axios.get("/api/stripe");
+      window.location.href = response.data.sessionId;
+    } catch (error) {
+      console.error(error, "Stripe error");
+    } finally {
+      setLoading(false);
+    }
+  };
   return (
     <Dialog open={proModal.isOpen} onOpenChange={proModal.onClose}>
       <DialogContent>
@@ -94,7 +107,13 @@ const ProModal = (props: Props) => {
           </DialogDescription>
         </DialogHeader>
         <DialogFooter>
-          <Button size="lg" variant={"premium"} className="w-full">
+          <Button
+            disabled={loading}
+            size="lg"
+            variant={"premium"}
+            className="w-full"
+            onClick={onSubscribe}
+          >
             Upgrade <Zap className="w-4 h-4 ml-2 fill-white" />
           </Button>
         </DialogFooter>
