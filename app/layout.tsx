@@ -6,6 +6,7 @@ import {
 } from "@clerk/nextjs";
 import ModalProvider from "@/components/modal-provider";
 import CrispProvider from "@/components/crisp-provider";
+import ToasterProvider from "@/components/toaster-provider";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -34,6 +35,7 @@ export default function RootLayout({
         <body
           className={`${geistSans.variable} ${geistMono.variable} antialiased`}
         >
+          <ToasterProvider />
           <ModalProvider />
           {children}
         </body>

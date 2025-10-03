@@ -19,8 +19,8 @@ const LandingNavbar = () => {
   return (
     <nav className="p-4 bg-transparent flex items-center justify-between">
       <Link href={"/"} className="flex items-center">
-        <div className="relative h-8 w-8 mr-4">
-          <Image src="/logo.svg" fill alt="logo" />
+        <div className="relative h-8 w-8 mr-2">
+          <Image src="/logo.png" fill alt="logo" />
         </div>
         <h1 className={cn("text-2xl font-bold text-white", font.className)}>
           Scorpio
